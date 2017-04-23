@@ -37,9 +37,9 @@ module.exports = {
     /**
      * in game text strings
      */
-    MAINMENU_DIALOG_TITLE: 'Mult-player Mario',
+    MAINMENU_DIALOG_TITLE: 'Pahser demo',
     MAINMENU_DIALOG_MSG: [
-        'This is a very early alpha.',
+        'This is a pahser demo game.',
         'Most images, logos, characters',
         'dialog, plot, and other assets',
         'taken from the original Super Mario',
