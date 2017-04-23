@@ -1,0 +1,22 @@
+{
+  "name": "phaser-demo",
+  "private": true,
+  "version": "0.0.1",
+  "description": "",
+  "devDependencies": {
+    "babelify": "^6.0.2",
+    "grunt": "^0.4.5",
+    "grunt-browserify": "^3.8.0",
+    "grunt-contrib-clean": "^0.6.0",
+    "grunt-contrib-copy": "^0.8.0",
+    "grunt-contrib-jshint": "^0.11.2",    
+    "grunt-contrib-watch": "^0.6.1",
+    "load-grunt-tasks": "^3.1.0"
+  },
+  "dependencies": {
+    "babel": "^5.2.17",
+    "phaser": "^2.3.0",
+    "phaser-debug": "^1.1.6",
+    "underscore": "^1.8.3"
+  }
+}
