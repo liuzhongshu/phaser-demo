@@ -12,6 +12,7 @@ class State extends Phaser.State {
     constructor(game) {
         super(game);
 
+        //what is keyboard handler
         this.inputHandler = new KeyboardHandler();
     }
 
