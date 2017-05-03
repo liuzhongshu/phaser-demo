@@ -1,14 +1,5 @@
-/*
- * ===========================================================================
- * File: play.js
- * Author: Anthony Del Ciotto
- * Desc: TODO
- * ===========================================================================
- */
 
-import State from 'states/state';
-
-class PlayState extends State {
+class PlayState extends Phaser.State {
     constructor(game) {
         super(game);
     }
