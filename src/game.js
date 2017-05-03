@@ -43,6 +43,9 @@ class Game extends Phaser.Game {
         //???
         ///this.input.maxPointers = 1;
 
+        this.load.image('loading-background', 'res/img/loading-background.png');
+        this.load.image('loading-progress', 'res/img/loading-progress.png');
+
         //phaser debug bar
         //this.add.plugin(Phaser.Plugin.Debug);
     }
