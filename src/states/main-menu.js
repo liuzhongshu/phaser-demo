@@ -17,7 +17,7 @@ class MainMenuState extends Phaser.State {
 
     create() {
         super.create();
-        this.stage.backgroundColor = Const.SKY_BLUE;
+        this.stage.backgroundColor = Const.COLOR_BLUE;
 
         this._menu = new Menu(this.game, 200, 300, [
             { text: '01 Game', fn: this._on01Game },
@@ -26,7 +26,7 @@ class MainMenuState extends Phaser.State {
             { text: 'Credits', fn: this._onCredit }
             ]);
 
-        let title = this.add.sprite(200, 100, 'title');
+        let title = this.add.sprite(200, 100, 'dart1');
         title.anchor.set(0.5); 
 
     }

@@ -8,7 +8,7 @@ module.exports = {
     /**
      * color 
      */
-    SKY_BLUE: 0x6D93FC,
+    COLOR_BLUE: '#6D93FC',
     COLOR_GOLD: '#FFD700'
 
     

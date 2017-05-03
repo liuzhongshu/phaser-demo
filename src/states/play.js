@@ -6,6 +6,7 @@ class PlayState extends Phaser.State {
 
     create() {
         super.create();
+		this.stage.backgroundColor = '#ff0000';
 
         this.game.pauseSound = this.game.add.audio('pause');
         this.game.bumpSound = this.game.add.audio('bump');

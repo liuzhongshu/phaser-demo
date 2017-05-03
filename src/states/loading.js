@@ -8,7 +8,7 @@ class LoadingState extends Phaser.State {
     preload() {
         super.preload();
 
-        this.load.image('title', 'res/img/title.png');
+        this.load.image('dart1', 'res/img/dart1.png');
     }
 
     create() {
