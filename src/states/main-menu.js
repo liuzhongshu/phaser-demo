@@ -14,6 +14,7 @@ class MainMenuState extends Phaser.State {
 
     create() {
         super.create();
+        console.log("create");
         this.stage.backgroundColor = Const.COLOR_STAGE_BG;
 
         this._menu = new TextMenu(this.game, 200, 200, [
@@ -43,9 +44,10 @@ class MainMenuState extends Phaser.State {
         let title = this.add.sprite(200, 100, 'dart1');
         title.anchor.set(0.5); 
 
-        this.world.add(new TextButton(this.game, 500,10, 'login', () => this.game.state.start('user')));
+        this.world.add(new TextButton(this.game, 800,30, this.game.config.account || 'login', () => this.game.state.start('user')));
 
     }
+
 
     _on01Game() {
         this._cricketMenu.visible = false;

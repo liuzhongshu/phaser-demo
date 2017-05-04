@@ -15,7 +15,7 @@ Phaser-demo is a game framework using phaser.
 
 ## TODO
 
-* menu background
+* menu border/background
 * switch button
 * storage
 * watchify when watch
