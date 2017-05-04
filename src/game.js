@@ -2,13 +2,14 @@
 
 import BootState from 'states/boot';
 import LoadingState from 'states/loading';
+import UserState from 'states/user';
 import MainMenuState from 'states/main-menu';
 import PlayState from 'states/play';
 
 class Game extends Phaser.Game {
     constructor() {
-        //width,height,renderer,DOM parent,default state, transparent, antialias
-        super(960, 540, Phaser.AUTO, 'game');
+        //only CANVAS is compatible with canvas-input
+        super(960, 540, Phaser.CANVAS, 'game');
     }
 
     boot() {
@@ -46,11 +47,14 @@ class Game extends Phaser.Game {
 
         //phaser debug bar
         //this.add.plugin(Phaser.Plugin.Debug);
+
+        this.config={};
     }
 
     start() {
         this.state.add('boot', BootState, true);
         this.state.add('loading', LoadingState, false);
+        this.state.add('user', UserState, false);
         this.state.add('mainMenu', MainMenuState, false);
         this.state.add('play', PlayState, false);
         

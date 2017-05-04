@@ -2,7 +2,8 @@
  *  Main menu for game
  */
 
-import Menu from 'gui/menu';
+import TextMenu from 'gui/text-menu';
+import TextButton from 'gui/text-button';
 import Const from 'const';
 
 class MainMenuState extends Phaser.State {
@@ -15,33 +16,82 @@ class MainMenuState extends Phaser.State {
         super.create();
         this.stage.backgroundColor = Const.COLOR_STAGE_BG;
 
-        this._menu = new Menu(this.game, 200, 300, [
-            { text: '01 Game', fn: this._on01Game },
-            { text: 'Countup', fn: this._onCountup },
-            { text: 'Options', fn: this._onOptions },
-            { text: 'Credits', fn: this._onCredit }
-            ]);
+        this._menu = new TextMenu(this.game, 200, 200, [
+            { text: '01GAME', fn: this._on01Game},
+            { text: 'CRICKET', fn: this._onCricket },
+            { text: 'COUNTUP', fn: this._onCountup },
+            { text: 'OTHERS', fn: this._onOthers },
+            { text: 'MATCH', fn: this._onMatch },
+            { text: 'ONLINE', fn: this._onOnline }
+            ], this);
+
+        this._01menu = new TextMenu(this.game, 600, 200, [
+            { text: '301', fn: this._on301 },
+            { text: '501', fn: this._on501 },
+            { text: '701', fn: this._on701 },
+            { text: '901', fn: this._on901 }
+            ], this);
+        
+        this._cricketMenu = new TextMenu(this.game, 600, 200, [
+            { text: 'Standard Cr', fn: this._onStdCr },
+            { text: 'Add Cr', fn: this._onAddCr }
+            ], this);
+
+        this._01menu.visible = false;
+        this._cricketMenu.visible = false;
 
         let title = this.add.sprite(200, 100, 'dart1');
         title.anchor.set(0.5); 
 
+        this.world.add(new TextButton(this.game, 500,10, 'login', () => this.game.state.start('user')));
+
     }
 
-    _on01Game(target) {
-        // this.game.stage.disableVisibilityChange = false;
-        target.game.state.start('play');
+    _on01Game() {
+        this._cricketMenu.visible = false;
+        this._01menu.visible = true;
     }
 
-    _onCountup(target) {
-        // this.game.stage.disableVisibilityChange = false;
-        target.game.state.start('play');
+    _onCricket() {
+        this._01menu.visible = false;        
+        this._cricketMenu.visible = true;
     }
 
-    _onOptions() {        
+    _onCountup() {        
     }
 
-    _onCredit() {
-        
+    _onOthers() {        
+    }
+
+    _onMatch() {        
+    }
+
+    _onOnline() {        
+    }
+
+    _on301() {
+        this.game.config.gameType = Const.GAME_301;
+        this.game.state.start('play');
+    }
+
+    _on501() {
+        this.game.config.gameType = Const.GAME_501;
+        //this.game.config.roundSetting= 10;
+        this.game.state.start('play');
+    }
+
+    _on701() {
+        this.game.config.gameType = Const.GAME_701;
+        this.game.state.start('play');
+    }
+
+    _on901() {
+    }
+
+    _onStdCr() {
+    }
+
+    _onAddCr() {
     }
 }
 

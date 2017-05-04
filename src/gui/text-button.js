@@ -1,7 +1,7 @@
 import Const from 'const';
 
 class TextButton extends Phaser.Text {
-    constructor(game, x, y, text, callback, style) {
+    constructor(game, x, y, text, callback, context, style) {
         super(game, x, y, text, _.extend({fill: Const.COLOR_MENU_NORMAL}, style));
         
         //center align
@@ -14,7 +14,7 @@ class TextButton extends Phaser.Text {
         this.events.onInputDown.add(target => target.setStyle(_.extend(target.style, {fill: Const.COLOR_MENU_HOVER})));
         this.events.onInputOut.add(target => target.setStyle(_.extend(target.style, {fill: Const.COLOR_MENU_NORMAL})));
         
-        this.events.onInputUp.add(callback);
+        this.events.onInputUp.add(callback, context);
     }
 }
 

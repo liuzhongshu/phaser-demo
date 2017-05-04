@@ -13,7 +13,8 @@ class PlayState extends Phaser.State {
         //this.game.bumpSound = this.game.add.audio('bump');
         //this.game.jumpSound = this.game.add.audio('jump');
 
-        
+        this.add.text(100, 100, this.game.config.gameType);
+        this.world.add(new TextButton(this.game, 100,400, 'End game', () => this.game.state.start('mainMenu')));
     }
 }
 
