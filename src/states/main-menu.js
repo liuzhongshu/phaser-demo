@@ -1,9 +1,5 @@
 /*
- * ===========================================================================
- * File: main_menu.js
- * Author: Anthony Del Ciotto
- * Desc: TODO
- * ===========================================================================
+ *  Main menu for game
  */
 
 import Menu from 'gui/menu';
@@ -17,7 +13,7 @@ class MainMenuState extends Phaser.State {
 
     create() {
         super.create();
-        this.stage.backgroundColor = Const.COLOR_BLUE;
+        this.stage.backgroundColor = Const.COLOR_STAGE_BG;
 
         this._menu = new Menu(this.game, 200, 300, [
             { text: '01 Game', fn: this._on01Game },

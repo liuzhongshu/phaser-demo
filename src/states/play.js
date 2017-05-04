@@ -1,3 +1,4 @@
+import Const from 'const';
 
 class PlayState extends Phaser.State {
     constructor(game) {
@@ -6,11 +7,11 @@ class PlayState extends Phaser.State {
 
     create() {
         super.create();
-		this.stage.backgroundColor = '#ff0000';
+		this.stage.backgroundColor = Const.COLOR_STAGE_BG;
 
-        this.game.pauseSound = this.game.add.audio('pause');
-        this.game.bumpSound = this.game.add.audio('bump');
-        this.game.jumpSound = this.game.add.audio('jump');
+        //this.game.pauseSound = this.game.add.audio('pause');
+        //this.game.bumpSound = this.game.add.audio('bump');
+        //this.game.jumpSound = this.game.add.audio('jump');
 
         
     }

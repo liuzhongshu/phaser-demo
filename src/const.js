@@ -8,8 +8,10 @@ module.exports = {
     /**
      * color 
      */
-    COLOR_BLUE: '#6D93FC',
-    COLOR_GOLD: '#FFD700'
+    COLOR_STAGE_BG: '#6D93FC',
+
+    COLOR_MENU_NORMAL: 'white',
+    COLOR_MENU_HOVER: '#FFD700'
 
     
     

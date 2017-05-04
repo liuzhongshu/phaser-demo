@@ -8,5 +8,8 @@ Phaser-demo is a game framework using phaser.
 
 ## TODO
 
-* improve the text-button
-* add loading progress bar
+* menu background
+* switch button
+* input
+* storage
+

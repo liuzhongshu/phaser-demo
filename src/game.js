@@ -1,5 +1,6 @@
 
 
+import BootState from 'states/boot';
 import LoadingState from 'states/loading';
 import MainMenuState from 'states/main-menu';
 import PlayState from 'states/play';
@@ -43,15 +44,13 @@ class Game extends Phaser.Game {
         //???
         ///this.input.maxPointers = 1;
 
-        this.load.image('loading-background', 'res/img/loading-background.png');
-        this.load.image('loading-progress', 'res/img/loading-progress.png');
-
         //phaser debug bar
         //this.add.plugin(Phaser.Plugin.Debug);
     }
 
     start() {
-        this.state.add('loading', LoadingState, true);
+        this.state.add('boot', BootState, true);
+        this.state.add('loading', LoadingState, false);
         this.state.add('mainMenu', MainMenuState, false);
         this.state.add('play', PlayState, false);
         
