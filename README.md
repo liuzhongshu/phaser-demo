@@ -11,10 +11,10 @@ Phaser-demo is a game framework using phaser.
 * game gui include TextButton, TextMenu
 * loading state with progress bar
 * global config para across state
+* canvas input control
 
 ## TODO
 
-* input
 * menu background
 * switch button
 * storage

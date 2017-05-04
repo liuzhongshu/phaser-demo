@@ -56,6 +56,7 @@
     self._onfocus = o.onfocus || function() {};
     self._onblur = o.onblur || function() {};
     self._cursor = false;
+    self._password = o.password || false;
     self._cursorPos = 0;
     self._hasFocus = false;
     self._selection = [0, 0];
@@ -1127,7 +1128,9 @@
         ctx.shadowOffsetY = self._fontShadowOffsetY;
         ctx.textAlign = 'left';
         ctx.textBaseline = 'middle';
-        ctx.fillText(text, textX, textY);
+
+        // support password type
+        ctx.fillText(self._password ? text.replace(/./g,"*") : text, textX, textY);
 
         // parse inner shadow
         var innerShadow = self._innerShadow.split('px '),
