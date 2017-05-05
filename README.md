@@ -12,6 +12,7 @@ Phaser-demo is a game framework using phaser.
 * loading state with progress bar
 * global config para across state
 * canvas input control
+* multiple language
 
 ## TODO
 

@@ -8,6 +8,7 @@ class InputBox extends Phaser.Sprite {
         this._canvasInput = new CanvasInput(_.extend({
           canvas: bmd.canvas,
           fontFamily: 'monospace',
+          widht: w,          
           boxShadow: '0px 0px 0px #fff',
         }, options));
 

@@ -18,12 +18,12 @@ class MainMenuState extends Phaser.State {
         this.stage.backgroundColor = Const.COLOR_STAGE_BG;
 
         this._menu = new TextMenu(this.game, 200, 200, [
-            { text: '01GAME', fn: this._on01Game},
-            { text: 'CRICKET', fn: this._onCricket },
-            { text: 'COUNTUP', fn: this._onCountup },
-            { text: 'OTHERS', fn: this._onOthers },
-            { text: 'MATCH', fn: this._onMatch },
-            { text: 'ONLINE', fn: this._onOnline }
+            { text: this.game.L('GAME01'), fn: this._on01Game},
+            { text: this.game.L('CRICKET'), fn: this._onCricket },
+            { text: this.game.L('COUNTUP'), fn: this._onCountup },
+            { text: this.game.L('OTHERS'), fn: this._onOthers },
+            { text: this.game.L('MATCH'), fn: this._onMatch },
+            { text: this.game.L('ONLINE'), fn: this._onOnline }
             ], this);
 
         this._01menu = new TextMenu(this.game, 600, 200, [
@@ -34,8 +34,8 @@ class MainMenuState extends Phaser.State {
             ], this);
         
         this._cricketMenu = new TextMenu(this.game, 600, 200, [
-            { text: 'Standard Cr', fn: this._onStdCr },
-            { text: 'Add Cr', fn: this._onAddCr }
+            { text: this.game.L('Standard Cr'), fn: this._onStdCr },
+            { text: this.game.L('Add Cr'), fn: this._onAddCr }
             ], this);
 
         this._01menu.visible = false;
@@ -44,7 +44,8 @@ class MainMenuState extends Phaser.State {
         let title = this.add.sprite(200, 100, 'dart1');
         title.anchor.set(0.5); 
 
-        this.world.add(new TextButton(this.game, 800,30, this.game.config.account || 'login', () => this.game.state.start('user')));
+        this.world.add(new TextButton(this.game, 800,30, this.game.config.account || 'login', 
+            () => this.game.state.start('user')));
 
     }
 

@@ -5,8 +5,8 @@ class TextButton extends Phaser.Text {
         super(game, x, y, text, _.extend({fill: Const.COLOR_MENU_NORMAL}, style));
         
         //center align
-        this.anchor.x = Math.round(this.width * 0.5) / this.width;
-        this.anchor.y = Math.round(this.height * 0.5) / this.height;
+        this.anchor.x = 0.5;
+        this.anchor.y = 0.5;
         
 		//for this Game Object and it will then start to process click / touch events and more.
         this.inputEnabled = true;

@@ -5,6 +5,7 @@ import LoadingState from 'states/loading';
 import UserState from 'states/user';
 import MainMenuState from 'states/main-menu';
 import PlayState from 'states/play';
+import Lang from 'lang';
 
 class Game extends Phaser.Game {
     constructor() {
@@ -62,6 +63,13 @@ class Game extends Phaser.Game {
     }
 
    
+    L(key) {
+        if (Lang[key]) 
+            return Lang[key][this.config.locale] || Lang[key][0];
+        else
+            return key;
+    }
+
 
     
 }
